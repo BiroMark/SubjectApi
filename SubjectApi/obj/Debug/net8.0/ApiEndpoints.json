@@ -78,6 +78,32 @@
   },
   {
     "ContainingType": "SubjectApi.Controllers.SubjectController",
+    "Method": "Delete",
+    "RelativePath": "subjects",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Guid",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "SubjectApi.Models.Subject",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "SubjectApi.Controllers.SubjectController",
     "Method": "GetById",
     "RelativePath": "subjects/{id}",
     "HttpMethod": "GET",

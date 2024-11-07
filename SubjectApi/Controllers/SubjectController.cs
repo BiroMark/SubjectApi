@@ -34,7 +34,7 @@ namespace SubjectApi.Controllers
             return BadRequest();
 
         }
-        
+
         [HttpGet]
         public ActionResult<Subject> Get()
         {
@@ -78,7 +78,24 @@ namespace SubjectApi.Controllers
 
         }
 
+        [HttpDelete]
+        public ActionResult<Subject> Delete(Guid id)
+        {
+            using (var context = new SubjectDbContext())
+            {
+                var deletesubject = context.Subjects.FirstOrDefault(x => x.Id == id);
+                if (deletesubject != null)
+                {
+                    context.Subjects.Remove(deletesubject);
+                    context.SaveChanges();
+                    return StatusCode(200, new { message = "sikeres törlés" });
+                }
+                return StatusCode(404, new { message = "Nincs mit törölni" });
+            }
 
 
+
+
+        }
     }
 }
