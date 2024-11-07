@@ -47,6 +47,37 @@
   },
   {
     "ContainingType": "SubjectApi.Controllers.SubjectController",
+    "Method": "Put",
+    "RelativePath": "subjects",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Guid",
+        "IsRequired": false
+      },
+      {
+        "Name": "updateSubjectdto",
+        "Type": "SubjectApi.Models.UpdateSubjectDto",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "SubjectApi.Models.Subject",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "SubjectApi.Controllers.SubjectController",
     "Method": "GetById",
     "RelativePath": "subjects/{id}",
     "HttpMethod": "GET",
