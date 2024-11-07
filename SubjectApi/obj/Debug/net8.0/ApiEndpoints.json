@@ -44,5 +44,31 @@
         "StatusCode": 200
       }
     ]
+  },
+  {
+    "ContainingType": "SubjectApi.Controllers.SubjectController",
+    "Method": "GetById",
+    "RelativePath": "subjects/{id}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Guid",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "SubjectApi.Models.Subject",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
   }
 ]

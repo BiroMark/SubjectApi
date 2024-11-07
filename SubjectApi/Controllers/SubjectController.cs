@@ -42,6 +42,22 @@ namespace SubjectApi.Controllers
             return Ok(context.Subjects.ToList());
 
         }
+        [HttpGet("{id}")]
+        public ActionResult<Subject> GetById(Guid id)
+        {
+            using (var context = new SubjectDbContext())
+            {
+                var subject = context.Subjects.SingleOrDefault(x => x.Id == id);
+                if (subject != null)
+                {
+                    return Ok(subject);
+                }
+                return NotFound();
+            }
+        }
+
+
+
 
     }
 }
